@@ -1,22 +1,32 @@
+/* Mooo! */
+@keyframes logo {
+  50% {
+    transform: translateX(6px) rotate(5deg);
+  }
 
+  100% {
+    transform: translateX(-6px) rotate(-5deg);
+  }
+}
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+#logo {
+  position: relative;
+  top: 1em;
+  left: 2em;
+}
 
+#logo:hover, #logo:focus, #logo:active
+{
+  animation-name: logo;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+/* End of Moo! */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn-huwi-application
+{
+	
+	min-width: 20em;
+}
 
