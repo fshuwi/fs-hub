@@ -87,6 +87,7 @@ $services = $csv;
 		$last_users = "";
 		foreach ($services as $service)
 		{
+		  $show = $service['Anzeigen'];
 		  $status = "status-".$service['Status'];
 		  $url = $service['URL'];
 		  $users = $service['Zugriff - Gruppe'];
@@ -110,30 +111,34 @@ $services = $csv;
 			
 		  <?php
 		  }
-		  ?>
 		  
-		  <!-- <button type="button" class="btn btn-lg btn-default">Default</button> -->
-		  <div style="display: inline-block;">
-		  <a href="<?=$url?>" class="btn btn-lg btn-default btn-huwi-application" role="button"><?=$title?></a>
-		  <?php
-		  if ($status != "status-working")
+		  if ($show == "ja")
 		  {
 			  ?>
-			  <span class="label label-warning"><?=$status?></span>
+			  
+			  <!-- <button type="button" class="btn btn-lg btn-default">Default</button> -->
+			  <div style="display: inline-block;">
+			  <a href="<?=$url?>" class="btn btn-lg btn-default btn-huwi-application" role="button"><?=$title?></a>
+			  <?php
+			  if ($status != "status-working")
+			  {
+				  ?>
+				  <span class="label label-warning"><?=$status?></span>
+				  <?php
+			  }
+			  ?>
+			  </div>
+			  <!-- <br><br> -->
+
+			  <!--
+			  <li class="<?=$status?>">
+				<a href="<?=$url?>">
+				  <?=$title?>
+				</a>
+			  </li> -->
+			  
 			  <?php
 		  }
-		  ?>
-		  </div>
-		  <!-- <br><br> -->
-
-		  <!--
-		  <li class="<?=$status?>">
-		    <a href="<?=$url?>">
-			  <?=$title?>
-			</a>
-		  </li> -->
-		  
-		  <?php
 		  $last_users = $users;
 		}
 		?>
