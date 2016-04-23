@@ -1,3 +1,5 @@
+<!doctype html>
+
 <?php
 $users_titles = array();
 $users_titles["1_alle"] = "Für alle Menschen";
@@ -14,7 +16,7 @@ array_shift($csv); # remove column header
 $services = $csv;
 
 ?>
-<!doctype html>
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -71,7 +73,7 @@ $services = $csv;
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-	    <img id="logo" src="kHuWi.svg" style="max-width: 10%;">
+	    <img id="logo" src="img/khuwi.svg" style="max-width: 10%;">
         <h1>Hallo, Menschen!</h1>
         <p>Du bist hier auf der Übersichtsseite der Fachschaft Huwi gelandet.</p>
         <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
@@ -111,6 +113,7 @@ $services = $csv;
 		  ?>
 		  
 		  <!-- <button type="button" class="btn btn-lg btn-default">Default</button> -->
+		  <div style="display: inline-block;">
 		  <a href="<?=$url?>" class="btn btn-lg btn-default btn-huwi-application" role="button"><?=$title?></a>
 		  <?php
 		  if ($status != "status-working")
@@ -120,6 +123,7 @@ $services = $csv;
 			  <?php
 		  }
 		  ?>
+		  </div>
 		  <!-- <br><br> -->
 
 		  <!--
